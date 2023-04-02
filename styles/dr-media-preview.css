@@ -1,0 +1,13 @@
+.dr_media_preview {
+  display: grid;
+}
+.dr_media_preview .dr_media_item {
+  box-sizing: border-box;
+  margin-bottom: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.dr_media_preview .dr_media_item .dr_media_item_img {
+  width: 100%;
+}

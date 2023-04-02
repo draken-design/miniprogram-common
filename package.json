@@ -1,0 +1,9 @@
+{
+  "name": "@draken-design/mini-common",
+  "type": "module",
+  "version": "0.0.1",
+  "description": "dranken-desigin 静态文件",
+  "devDependencies": {
+    "less": "^4.1.3"
+  }
+}

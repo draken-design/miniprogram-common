@@ -1,0 +1,97 @@
+@import './common/vars.less';
+.dr_tag {
+  position: relative;
+  display: inline-flex;
+  word-break: break-all;
+  align-items: center;
+  margin: 0 3px;
+  padding: 1px 4px;
+  &_size_small {
+    font-size: 12px;
+    padding: 1px 3px;
+  }
+  &_size_default {
+    font-size: 14px;
+  }
+  &_size_medium {
+    font-size: 16px;
+    padding: 2px 5px;
+  }
+  &_size_large {
+    font-size: 18px;
+    padding: 3px 6px;
+  }
+  &_type_primary {
+    background: @primary;
+    color: @white;
+  }
+  &_type_success {
+    background: @success;
+    color: #fff;
+  }
+  &_type_warning {
+    background: @warning;
+    color: #fff;
+  }
+  &_type_info {
+    background: @info;
+    color: #fff;
+  }
+  &_type_error {
+    background-color: @error;
+    color: #fff;
+  }
+  &_plain::after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    border: 1px solid;
+    border-color: inherit;
+    border-radius: inherit;
+    content: '';
+    pointer-events: none;
+  }
+  &_success_plain {
+    background: #fff;
+    border-color: @success;
+    color: @success;
+  }
+  &_warning_plain {
+    background: #fff;
+    border-color: @warning;
+    color: @warning;
+  }
+  &_error_plain {
+    background: #fff;
+    border-color: @error;
+    color: @error;
+  }
+  &_info_plain {
+    background: #fff;
+    border-color: @info;
+    color: @info;
+  }
+  &_primary_plain {
+    background: #fff;
+    border-color: @primary;
+    color: @primary;
+  }
+  &_round {
+    border-radius: 4px;
+  }
+  .dr_tag_children {
+    display: flex;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    align-items: center;
+  }
+  .dr_tag_image {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    margin-right: 4px;
+  }
+}
