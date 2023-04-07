@@ -3,6 +3,10 @@
   "type": "module",
   "version": "0.0.1",
   "description": "dranken-desigin 静态文件",
+  "scripts": {
+    "dev": "node build.less.js dev",
+    "build": "node build.less.js build"
+  },
   "devDependencies": {
     "less": "^4.1.3"
   }

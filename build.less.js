@@ -6,15 +6,16 @@ const __Path = path.join("build.less.js");
 const __dirname = fileURLToPath(import.meta.url).replace(__Path, "");
 const buildCssPath = path.join(__dirname, "styles");
 const lessAssetsPath = [path.join(__dirname, "less")];
+const isPro = process.argv[2] === "build";
 const buildCss = (cssContent, outputPath) => {
   return new Promise((resolve, reject) => {
     less
       .render(cssContent, {
         paths: lessAssetsPath,
-        compress: false,
+        compress: isPro,
       })
       .then((res) => {
-        if (res.css)
+        if (res.css) {
           fs.writeFile(outputPath, res.css, (err) => {
             if (err) {
               reject(err);
@@ -22,6 +23,9 @@ const buildCss = (cssContent, outputPath) => {
               resolve();
             }
           });
+        } else {
+          resolve();
+        }
       })
       .catch((err) => {
         console.log(err);
@@ -38,7 +42,7 @@ const findLessAndBuild = async (lessPath, cssPath) => {
     if (ele.isDirectory()) {
       lessAssetsPath.push(_Path);
       fs.mkdirSync(_BuildPath, { recursive: true });
-      findLessAndBuild(_Path, _BuildPath);
+      await findLessAndBuild(_Path, _BuildPath);
     } else if (ele.isFile()) {
       const cssContent = fs.readFileSync(_Path);
       await buildCss(

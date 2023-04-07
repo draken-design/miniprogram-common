@@ -1,4 +1,5 @@
 @import './vars.less';
+// 不适用有点击事件的
 .dr_1px_border(@borderPos: border,@borderColor: @border) {
   position: relative;
   &:before {
@@ -29,7 +30,7 @@
   -webkit-transform: scaleX(0.5);
     transform: scaleX(0.5);
 }
-.dr_1px_edge_line(@borderPos: border-bottom, @pos: bottom, @borderColor: @border) {
+.dr_1px_line(@borderPos: border-bottom, @pos: bottom, @borderColor: @border) {
   position: relative;
   &:before {
     display: block;
