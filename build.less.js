@@ -33,6 +33,7 @@ const buildCss = (cssContent, outputPath) => {
       });
   });
 };
+let str = "";
 const findLessAndBuild = async (lessPath, cssPath) => {
   const dir = fs.readdirSync(lessPath, { withFileTypes: true });
   for (let i = 0; i < dir.length; i++) {
@@ -49,12 +50,15 @@ const findLessAndBuild = async (lessPath, cssPath) => {
         cssContent.toString(),
         _BuildPath.replace(".less", ".css")
       );
+      str += `@import '${_Path}';\r\n`;
     }
   }
 };
-fs.mkdir(buildCssPath, { recursive: true }, (err) => {
+fs.mkdir(buildCssPath, { recursive: true }, async (err) => {
   if (!err) {
-    findLessAndBuild(lessAssetsPath[0], buildCssPath);
+    await findLessAndBuild(lessAssetsPath[0], buildCssPath);
+    // 打包所有css
+    await buildCss(str, path.join(buildCssPath, "index.dist.css"));
   } else {
     console.log(err);
   }
