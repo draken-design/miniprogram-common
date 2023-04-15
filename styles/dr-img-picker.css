@@ -1,0 +1,1 @@
+.dr_img_picker{display:grid}.dr_img_picker .dr_img_item{position:relative;box-sizing:border-box;border:1px solid #eee;display:flex;justify-content:center;align-items:center;overflow:hidden;margin-bottom:10rpx;background-color:rgba(0,0,0,0.1)}.dr_img_picker .dr_img_item .dr_img_item_img{width:100%}.dr_img_picker .dr_img_item .dr_img_picker_del{position:absolute;right:2px;top:2px}

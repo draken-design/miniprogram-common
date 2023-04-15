@@ -1,38 +1,47 @@
 .dr_drop_down {
   width: 100%;
-  position: relative;
   box-sizing: border-box;
   min-height: 40px;
-  .dr_drop_model {
+  .dr_drop_down_model {
     position: absolute;
     z-index: 1000;
     left: 0;
     right: 0;
     display: flex;
     flex-direction: column;
-    background: rgba(0, 0, 0, 0.5);
-  }
-  .dr_drop_content {
-    padding: 0 16px;
-    background-color: #fff;
-    .dr_drop_option {
+    .dr_drop_down_content {
+      display: flex;
+      flex-direction: column;
+      background-color: #fff;
+    }
+    .dr_drop_down_val_option {
+      display: flex;
+      padding: 0 16px;
+      .dr_drop_down_value {
+        display: inline-flex;
+        margin-right: 20px;
+        align-items: center;
+        justify-content: center;
+        font-weight: 400;
+        font-size: 14px;
+        height: 40px;
+        line-height: 40px;
+        color: #646a73;
+      }
+    }
+
+    .dr_drop_down_arrow {
+      margin-left: 10px;
+    }
+    .dr_drop_down_down {
+      transform: rotate(180deg);
+    }
+    .dr_drop_down_option {
       overflow-y: scroll;
     }
   }
-  .dr_drop_value {
-    display: inline-flex;
-    align-items: center;
-    font-weight: 400;
-    font-size: 14px;
-    height: 40px;
-    line-height: 40px;
-    color: #646a73;
-    margin-right: 15px;
-  }
-  .dr_drop_triangle {
-    width: 0;
-    height: 0;
-    margin: 0 4px;
-    border: 4px solid;
+  .dr_drop_down_mosk {
+    background: rgba(0, 0, 0, 0.5);
+    flex: 1;
   }
 }

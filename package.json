@@ -1,7 +1,7 @@
 {
   "name": "@draken-design/mini-common",
   "type": "module",
-  "version": "0.0.11",
+  "version": "0.0.12",
   "description": "dranken-desigin 静态文件",
   "scripts": {
     "dev": "node build.less.js dev",

@@ -1,0 +1,47 @@
+@import "./common/vars.less";
+.dr_steps {
+  display: flex;
+  width: 100%;
+  box-sizing: border-box;
+  .dr_steps_item {
+    flex: 1;
+    text-align: center;
+    .dr_steps_item_wrap {
+      display: flex;
+      position: relative;
+      justify-content: center;
+    }
+    .dr_steps_wrap_line {
+      position: absolute;
+      top: 50%;
+      width: 33.3%;
+      height: 1px;
+      background-color: #ccc;
+    }
+    .dr_steps_wrap_line_left {
+      left: 0;
+    }
+    .dr_steps_wrap_line_right {
+      right: 0;
+    }
+    .dr_steps_figure {
+      border-radius: 50%;
+      background-color: @border;
+      color: @text-light-color;
+      width: 24px;
+      height: 24px;
+    }
+    .dr_steps_figure_active {
+      color: #fff;
+      background-color: @primary;
+    }
+    .dr_steps_title {
+      font-size: 16px;
+      padding: 4px 0;
+    }
+    .dr_steps_desc {
+      color: #ccc;
+      font-size: 12px;
+    }
+  }
+}
