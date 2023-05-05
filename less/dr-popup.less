@@ -1,24 +1,11 @@
-@import './common/vars.less';
+@import "./common/vars.less";
 .dr_popup {
   display: flex;
-  position: fixed;
-  top: 0;
-  left: 0;
   flex-direction: column;
-  width: 100vw;
-  height: 100vh;
-  background: rgba(0, 0, 0, 0.5);
-  opacity: 0;
-  &_show {
-    display: flex;
-    animation: dr_popup_show_animation 0.3s linear forwards;
-  }
-  &_hide {
-    display: none;
-  }
+  width: 100%;
+  height: 100%;
   .dr_popup_top {
     flex: 1;
-    position: relative;
   }
   .dr_content_height {
     background-color: #fff;
@@ -32,14 +19,18 @@
       height: 52px;
     }
     .dr_popup_title {
-      display: flex;
-      justify-content: center;
+      position: relative;
+      width: 100%;
       font-weight: 500;
       font-size: 18px;
       line-height: 52px;
       text-align: center;
-      width: 100%;
-      position: relative;
+      .dr_popup_icon {
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+      }
     }
     .dr_popup_img {
       position: absolute;
@@ -73,14 +64,5 @@
       color: @primary;
       margin-left: 16px;
     }
-  }
-}
-
-@keyframes dr_popup_show_animation {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
   }
 }

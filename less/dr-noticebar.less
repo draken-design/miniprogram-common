@@ -1,0 +1,48 @@
+.dr_noticebar {
+  .dr_noticebar_content {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 3px 0;
+    box-sizing: border-box;
+    color: #de8c17;
+    background: #fcf6ed;
+    .dr_noticebar_content_text {
+      flex: 1;
+      font-size: 12px;
+      line-height: 26px;
+    }
+  }
+  .dr_noticebar_roll {
+    position: absolute;
+    white-space: nowrap;
+    z-index: 0;
+    padding-left: 100%;
+    animation: marquee 20s linear infinite both;
+  }
+  .dr_noticebar_icon {
+    z-index: 1;
+    background: #fcf6ed;
+  }
+}
+@keyframes marquee {
+  to {
+    -webkit-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0);
+  }
+}
+
+// @-webkit-keyframes progress-active {
+//   0% {
+//       opacity: .5;
+//       -webkit-transform: translate(-100%);
+//       transform: translate(-100%)
+//   }
+
+//   to {
+//       opacity: .1;
+//       -webkit-transform: translate(0);
+//       transform: translate(0)
+//   }
+// }

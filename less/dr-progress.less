@@ -1,0 +1,38 @@
+.dr_progress {
+  display: flex;
+  align-items: center;
+  .dr_progress_stroke {
+    flex-grow: 1;
+    box-sizing: border-box;
+    .dr_progress_percentage {
+      height: 100%;
+      position: relative;
+    }
+    .dr_progress_percentage_inProgress {
+      &:after {
+        content: "";
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        background-color: #fff;
+        border-radius: 100px;
+        animation: progress-active 2s infinite;
+      }
+    }
+  }
+  .dr_progress_text {
+    margin-left: 10px;
+  }
+}
+@keyframes progress-active {
+  0% {
+    opacity: 0.8;
+    transform: translate(-100%);
+  }
+  to {
+    opacity: 0.3;
+    transform: translate(0);
+  }
+}

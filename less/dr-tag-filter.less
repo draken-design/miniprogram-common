@@ -1,0 +1,46 @@
+.dr_tag_filter_scroll {
+  div::-webkit-scrollbar {
+    display: none;
+  }
+  .dr_tag_filter {
+    display: flex;
+    white-space: nowrap;
+    width: 100%;
+    .dr_tag_filter_item {
+      box-sizing: border-box;
+      background-color: #eff0f1;
+      color: #1f2329;
+      border-radius: 6px;
+      padding: 8px 16px;
+      text-align: center;
+      margin: 0 16px 16px 0;
+    }
+    .dr_tag_filter_item_active {
+      background-color: #e1eaff;
+      color: #3370ff;
+    }
+  }
+  .dr_tag_filter_column {
+    flex-wrap: wrap;
+    .dr_tag_filter_item_column-1 {
+      &:nth-of-type(1n) {
+        margin-right: 0px;
+      }
+    }
+    .dr_tag_filter_item_column-2 {
+      &:nth-of-type(2n) {
+        margin-right: 0px;
+      }
+    }
+    .dr_tag_filter_item_column-3 {
+      &:nth-of-type(3n) {
+        margin-right: 0px;
+      }
+    }
+    .dr_tag_filter_item_column-4 {
+      &:nth-of-type(4n) {
+        margin-right: 0px;
+      }
+    }
+  }
+}

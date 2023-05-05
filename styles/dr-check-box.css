@@ -1,0 +1,1 @@
+.dr_check_box{display:flex;padding:5px;align-items:center}.dr_check_box .dr_check_box_icon{width:20px;height:20px;box-sizing:border-box}.dr_check_box .dr_check_box_icon.dr_check_box_icon_active{border-radius:50%;overflow:hidden;border:2px solid}.dr_check_box .dr_check_box_right{margin-left:10px;flex:1}

@@ -1,0 +1,1 @@
+.dr_basic_mask{position:absolute;bottom:0;top:0;left:0;right:0}.dr_basic_mask_show{display:flex;flex-direction:column;animation:dr_basic_mask_animation .3s linear forwards}.dr_basic_mask_hide{display:none}.dr_basic_mask .dr_basic_mask_content{flex:1}@keyframes dr_basic_mask_animation{0%{opacity:.1}100%{opacity:1}}
